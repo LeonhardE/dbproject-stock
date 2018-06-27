@@ -1,12 +1,8 @@
 const mysql = require('mysql');
-
+const sqlroot = require('../config')
 export async function getdetail(ctx, next) {
     
-    var connection = mysql.createConnection({
-        host     : '39.108.223.141',
-        user     : 'root',
-        password : '123456',
-    });
+    var connection = mysql.createConnection(sqlroot);
     
     connection.connect();
     connection.query('select * from Project.stock where ', [], function (error, results, fields) {
