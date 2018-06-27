@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/javascripts/jquery-3.2.1.min.js')
+    script(src='/javascripts/search.js')
+  body
+  h1= title
+  p Search for your stock
+  
+  div(id = "search")
+    input(type="text" name="searchtext" class="searchword")
+    input(id="submit" type="button", value="Search")
