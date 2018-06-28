@@ -1,11 +1,12 @@
-const Koa = require('koa')
+
+const req = require('./index');
+import Koa from 'koa'
 const app = new Koa()
 const views = require('koa-views')
 const json = require('koa-json')
 const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
-
 const index = require('./routes/index')
 
 // error handler
@@ -40,4 +41,4 @@ app.on('error', (err, ctx) => {
   console.error('server error', err, ctx)
 });
 
-module.exports = app
+export default app;
