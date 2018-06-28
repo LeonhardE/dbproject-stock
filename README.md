@@ -1,5 +1,7 @@
-# dbproject-stock
+dbproject-stock
 
-## npm start or node npm
+	This is my project for the database class and we are going to build a stock management website.
 
-### the entry.js is the entry file
+Start the project
+
+	npm start
