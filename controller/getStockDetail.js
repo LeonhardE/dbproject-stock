@@ -1,4 +1,4 @@
-const mysql = require('mysql');
+import mysql from 'mysql';
 import sqlconfig from ('../config')
 export async function getdetail(ctx, next) {
     

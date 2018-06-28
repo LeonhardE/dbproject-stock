@@ -1,7 +1,6 @@
-const router = require('koa-router')()
+import Router  from 'koa-router'
 
-
-module.exports = router;
+const router = Router()
 
 router.get('/detail', async (ctx, next) => {
     param = ctx.request.query;
@@ -13,3 +12,5 @@ router.get('/search', async (ctx, next) => {
         title: 'Search!'
     })
 });
+
+export default router

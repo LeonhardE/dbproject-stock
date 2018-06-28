@@ -7,6 +7,9 @@ yarn-error.log*
 
 .DS_Store
 config.js
+public/stylesheets/app/
+public/stylesheets/dist/
+public/stylesheets/docs/
 
 # Runtime data
 pids
