@@ -1,6 +1,10 @@
-extends layout
+extends layout1
+
+block scripts
+  script(src='/javascripts/index.js')
 
 block content
+  link(rel='stylesheet', href='/stylesheets/background.css')
   .demo-samples
     .login-form
       .sborder
@@ -8,15 +12,15 @@ block content
           img(src="resource/mine_fill.svg")
         |             
         .form-group
-          input#login-name.form-control.login-field(type="text", value="", placeholder="Enter your name")
+          input#login-name.form-control.login-field(type="text", value="", placeholder="邮箱")
           |               
           label.login-field-icon.fui-user(for="login-name")
         |             
         .form-group
-          input#login-pass.form-control.login-field(type="password", value="", placeholder="Password")
+          input#login-pass.form-control.login-field(type="password", value="", placeholder="密码")
           |               
           label.login-field-icon.fui-lock(for="login-pass")
         |             
-        a.btn.btn-primary.btn-lg.btn-block(href="#") Log in
+        a#login-btn.btn.btn-primary.btn-lg.btn-block(href="#") 登录
         |             
-        .login-link(href="#") Forgot your password?
+        a.login-link(href="/signup/signup") 新用户注册
