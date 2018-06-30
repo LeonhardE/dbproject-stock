@@ -1,0 +1,47 @@
+doctype html
+html
+  head
+    title= title
+
+    block style
+      link(rel='stylesheet', href='/stylesheets/style.css')
+      link(rel = 'stylesheet', href='/stylesheets/dist/css/vendor/bootstrap.min.css')
+
+      link(rel = 'stylesheet', href='/stylesheets/dist/css/flat-ui.css')
+      link(rel = 'stylesheet', href='/stylesheets/docs/assets/css/demo.css')
+      link(rel = 'stylesheet', href='/stylesheets/dist/css/flat-ui.css')
+
+      script(src='https://unpkg.com/sweetalert/dist/sweetalert.min.js')
+      script(src='https://code.jquery.com/jquery-3.3.1.min.js', integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=', crossorigin='anonymous')
+      script(src='https://unpkg.com/popper.js@1.14.1/dist/umd/popper.min.js', crossorigin='anonymous')
+      script(src='http://vjs.zencdn.net/6.6.3/video.js')
+      script(src='/stylesheets/dist/scripts/flat-ui.js')
+      script(src='/stylesheets/docs/assets/js/application.js')
+      script(src='/javascripts/jquery-3.2.1.min.js')
+      script(src='/javascripts/jquery.cookie.js')
+    block scripts
+    
+  body
+    block nav
+    .row.demo-row
+      .col
+        nav.navbar.navbar-inverse.navbar-embossed.navbar-expand-lg(role="navigation")
+          a.navbar-brand(href="/") HOME
+          |             
+          button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbar-collapse-01")
+          |             
+          #navbar-collapse-01.collapse.navbar-collapse
+            ul.nav.navbar-nav.mr-auto
+              li
+                a(href="query") 股票检索
+              |                 
+              li
+                a(href="Aboutus.html") 关于我们
+            |                
+            img(src="../resource/people.svg", height="45px", width="45px")
+            li.nav.user
+              a(href="../index.html") 未登录
+
+    block content
+    block foot
+      footer(class='rfooter') Copyright © 2018-2028 SYSU, All Rights Reserved
