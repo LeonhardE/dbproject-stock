@@ -1,21 +1,13 @@
-body {
-	background: url(../resource/bg.jpg) no-repeat;
-	background-size: 100% 100%;
-	background-position: cover;
-	/*background-repeat: none;*/
-}
-
 .rfooter {
 	height: 25px;
 	text-align: center;
 	background-color: rgb(31, 42, 58);
-	position: absolute;
+	position: fixed;
     bottom: 0;
     width: 100%;
 }
 
 html {
-	overflow: hidden;
 	width: 100%;
 	height: 100%;
 }
@@ -33,12 +25,26 @@ html {
 	text-align: center;
 }
 
+.userinfo {
+	height: 450px;
+	width: 300px;
+	background-color: #ECF0F1;
+	border-radius: 20px;
+	margin: auto;
+	text-align: center;
+}
+
 .info-content {
 	padding: 10px;
 }
 
 .description {
 	color: white;
+}
+
+.smalllink {
+	color: black;
+	font-size: 10px;
 }
 
 .more {
@@ -51,7 +57,7 @@ html {
 	color: white;
 	font-size: 15px;
 	text-align: center;
-	margin-right: 20px;
+	margin-right: 0px;
 }
 
 .stock {
@@ -71,6 +77,66 @@ html {
 	margin: auto;
 	text-align: left;
 }
+
+.signup {
+	width: 450px;
+	margin: auto;
+}
+
+.signuptitle {
+	color: white;
+	font-size: 24px;
+	text-align: center;
+}
+
+.signupinfo {
+	color: white;
+	font-size: 13px;
+	margin: auto;
+}
+
+.signup-field {
+	border-color: transparent;
+    font-size: 12px;
+    text-indent: 3px;
+}
+
+.signup-form {
+	height: 30px;
+}
+
+.signup-group {
+	margin-bottom: 5px
+}
+
+.center {
+	text-align: center;
+}
+
+.img-center {
+	position: relative;
+	left: 27%;
+	margin: auto;
+}
+
+.viewbtn {
+	position: relative;
+	left: 38%;
+	width: 300px;
+	margin-bottom: 50px; 
+}
+
+.search {
+	position: relative;
+	left: 35%;
+	width: 400px;
+}
+
+.searchtitle {
+	font-size: 25px;
+}
+
+
 
 
 
