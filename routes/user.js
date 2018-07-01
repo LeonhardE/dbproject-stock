@@ -1,5 +1,5 @@
 import Router from 'koa-router'
-import { registerUser, userlogin } from "../controller/user"
+import { registerUser, userlogin, StockofUser } from "../controller/user"
 
 const router = Router()
 
@@ -13,5 +13,9 @@ router.post('/login', async (ctx, next) => {
     ctx.body = await userlogin(email, passwd);
 });
 
+router.get('/prefer', async (ctx, next) => {
+    const { email : email } = ctx.request.query;
+    ctx.body = await StockofUser(email);
+});
 
 export default router;

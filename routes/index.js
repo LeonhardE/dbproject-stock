@@ -1,4 +1,3 @@
-import stockrt from './stock'
 import signuprt from './signup'
 import mainrt from './main'
 import userinfort from './userinfo'
@@ -16,7 +15,6 @@ router.get('/', async (ctx, next) => {
 router.use('/userinfo', userinfort.routes());
 router.use('/main', mainrt.routes());
 router.use('/signup', signuprt.routes());
-router.use('/stock', stockrt.routes());
 
 router.use('/api', apirt.routes());
 

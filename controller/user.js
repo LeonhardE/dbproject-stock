@@ -44,3 +44,16 @@ export async function userlogin(email, passwd) {
     if (res && compareSha(passwd, res["password"])) return true;
     return false;
 }
+
+export async function StockofUser(email) {
+    var connection = mysql.createConnection(sqlconfig);
+    connection.connect();
+    const res = await (new Promise((resolve, reject) =>{
+	    connection.query('SELECT * FROM project.userandstock where email = ?' , [email], function (error, results, fields) {
+	        if (error) throw error;
+	        resolve(results);
+	    });
+    }))
+    connection.end();
+    return res;
+}
