@@ -45,20 +45,46 @@ export async function userexisted(email) {
 }
 
 export async function userlogin(ctx, next) {
-    const { email : email, passwd : passwd} = ctx.request.body;
+    if (ctx.session.user) {
+        ctx.body = {
+            msg : 'already logined',
+            state: false
+        }
+        return;
+    }
+    const { email, passwd } = ctx.request.body;
     var connection = mysql.createConnection(sqlconfig);
     connection.connect();
-    const [ res ] = await (new Promise((resolve, reject) =>{
+    const [ res ] = await new Promise((resolve, reject) =>{
 	    connection.query('select * from project.user where email = ?' , [email], function (error, results, fields) {
 	        if (error) throw error;
 	        resolve(results);
 	    });
-    }))
+    })
     connection.end();
     if (res && compareSha(passwd, res["password"])) {
-        
-    };
-    return false;
+        ctx.session.user = {
+            username: res["username"],
+            email: email,
+        };
+        ctx.body = {
+            msg: "success login",
+            status: true
+        };
+    }else {
+        ctx.body = {
+            msg: "username or password wrong",
+            status: false
+        };
+    }
+}
+
+export async function logout(ctx, next) {
+    ctx.session = null;
+    ctx.body = {
+        msg: "success logout",
+        status: true
+    }
 }
 
 export async function StockofUser(email) {
