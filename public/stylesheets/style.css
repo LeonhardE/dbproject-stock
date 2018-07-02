@@ -1,4 +1,5 @@
 .rfooter {
+.rfooter {
 	height: 25px;
 	text-align: center;
 	background-color: rgb(31, 42, 58);
@@ -102,7 +103,7 @@ html {
 }
 
 .signup-form {
-	height: 30px;
+	height: 30px !important;
 }
 
 .signup-group {
@@ -135,6 +136,25 @@ html {
 .searchtitle {
 	font-size: 25px;
 }
+
+.info-row {
+	margin-left: 20px !important;
+	margin-right: 20px !important;
+	margin-top: 40px;
+}
+
+.infostock {
+	pointer-events: none;
+}
+
+.choose {
+	width: 300px !important;
+	position: relative;
+	left: 39.3%;
+	margin-top: 30px;
+}
+
+
 
 
 
